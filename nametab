@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# A simple script which will name a tab in iTerm
+# usage:
+# $ nametab <new_tab_name>
+
+#echo -ne "\033]0;"$@"\007"
+echo "\033]0;"$@"\007"
