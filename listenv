@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+import os
+import sys
+
+INDENT = 24
+FMT_STR = '{:>' + str(INDENT) + '}: {}'
+VAL_SPC = '\n' + (INDENT + 2) * ' '
+
+keys = list(os.environ.keys())
+matches = []
+
+search_list = []
+if len(sys.argv) > 1:
+    search_list.extend(sys.argv[1:])
+    for key in keys:
+        for search in search_list:
+            if key.upper().startswith(search.upper()):
+                matches.append(key)
+
+else:
+    matches = keys
+
+matches = sorted(matches, key=str.upper)
+
+for k in matches:
+    val = VAL_SPC.join(os.environ[k].split(':'))
+    print(FMT_STR.format(k,val))
