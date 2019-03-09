@@ -25,6 +25,8 @@ def callCaffeinate(hours):
 
     # Mac OSX specific
     # assumes caffeinate is installed on the system and is in your path
+    time = "date '+Starting at %H:%M'"
+    os.system(time)
     cmd = "caffeinate {} -t {}".format(flags, seconds) # -t is time in seconds
     print(cmd)
     os.system(cmd)
