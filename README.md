@@ -1,5 +1,5 @@
-# mac-utils
-Utilities I use on Mac OSX
+# misc-utils
+Utilities I use on Mac OSX and other command lines
 
 *   caff - calls caffeinate to keep system awake
 *   nametab - bash script to explicitly name a tab in iTerm
